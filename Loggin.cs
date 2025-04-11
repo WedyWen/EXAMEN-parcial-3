@@ -21,7 +21,7 @@ namespace EXAMEN_parcial_3
         private void btnINGRESAR_Click(object sender, EventArgs e)
         {
             string user = txbUSUARIO.Text;
-            string password =txbCONTRASENIA.Text;
+            string password = txbCONTRASENIA.Text;
 
             var lista = usuarios.ObtenerUsuario();
             var validar = lista.FirstOrDefault(u => u.Usuario == user && u.Contrasenia == password);
@@ -38,6 +38,11 @@ namespace EXAMEN_parcial_3
 
 
 
+
+        }
+
+        private void Loggin_Load(object sender, EventArgs e)
+        {
 
         }
     }

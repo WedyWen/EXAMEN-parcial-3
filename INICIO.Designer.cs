@@ -35,15 +35,15 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            tbxColor = new TextBox();
+            tbxID = new TextBox();
+            tbxNombre = new TextBox();
+            tbxFecha = new TextBox();
+            tbxActivo = new TextBox();
             btnAGREGAR = new Button();
             btnACTUALIZAR = new Button();
             btnELIMINAR = new Button();
-            txb = new TextBox();
+            tbxEliminar = new TextBox();
             btnLIMPIAR = new Button();
             btnMOSTRAR = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -62,89 +62,90 @@
             label1.AutoSize = true;
             label1.Location = new Point(672, 22);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(36, 15);
             label1.TabIndex = 1;
-            label1.Text = "label1";
+            label1.Text = "Color";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(672, 87);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(18, 15);
             label2.TabIndex = 2;
-            label2.Text = "label2";
+            label2.Text = "ID";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(672, 149);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(51, 15);
             label3.TabIndex = 3;
-            label3.Text = "label3";
+            label3.Text = "Nombre";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(672, 219);
             label4.Name = "label4";
-            label4.Size = new Size(38, 15);
+            label4.Size = new Size(97, 15);
             label4.TabIndex = 4;
-            label4.Text = "label4";
+            label4.Text = "Fecha de registro";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(672, 294);
             label5.Name = "label5";
-            label5.Size = new Size(38, 15);
+            label5.Size = new Size(41, 15);
             label5.TabIndex = 5;
-            label5.Text = "label5";
+            label5.Text = "Activo";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Location = new Point(672, 435);
             label6.Name = "label6";
-            label6.Size = new Size(38, 15);
+            label6.Size = new Size(18, 15);
             label6.TabIndex = 6;
-            label6.Text = "label6";
+            label6.Text = "ID";
             // 
-            // textBox1
+            // tbxColor
             // 
-            textBox1.Location = new Point(636, 44);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 7;
+            tbxColor.Location = new Point(636, 44);
+            tbxColor.Name = "tbxColor";
+            tbxColor.Size = new Size(100, 23);
+            tbxColor.TabIndex = 7;
             // 
-            // textBox2
+            // tbxID
             // 
-            textBox2.Location = new Point(636, 107);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 8;
+            tbxID.Location = new Point(636, 107);
+            tbxID.Name = "tbxID";
+            tbxID.Size = new Size(100, 23);
+            tbxID.TabIndex = 8;
             // 
-            // textBox3
+            // tbxNombre
             // 
-            textBox3.Location = new Point(636, 170);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 9;
+            tbxNombre.Location = new Point(636, 170);
+            tbxNombre.Name = "tbxNombre";
+            tbxNombre.Size = new Size(100, 23);
+            tbxNombre.TabIndex = 9;
             // 
-            // textBox4
+            // tbxFecha
             // 
-            textBox4.Location = new Point(636, 240);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 10;
+            tbxFecha.Location = new Point(636, 240);
+            tbxFecha.Name = "tbxFecha";
+            tbxFecha.Size = new Size(100, 23);
+            tbxFecha.TabIndex = 10;
             // 
-            // textBox5
+            // tbxActivo
             // 
-            textBox5.Location = new Point(636, 314);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 11;
+            tbxActivo.Location = new Point(636, 314);
+            tbxActivo.Name = "tbxActivo";
+            tbxActivo.Size = new Size(100, 23);
+            tbxActivo.TabIndex = 11;
             // 
             // btnAGREGAR
             // 
@@ -154,6 +155,7 @@
             btnAGREGAR.TabIndex = 12;
             btnAGREGAR.Text = "AGREGAR";
             btnAGREGAR.UseVisualStyleBackColor = true;
+            btnAGREGAR.Click += btnAGREGAR_Click;
             // 
             // btnACTUALIZAR
             // 
@@ -163,22 +165,24 @@
             btnACTUALIZAR.TabIndex = 13;
             btnACTUALIZAR.Text = "ACTUALIZAR";
             btnACTUALIZAR.UseVisualStyleBackColor = true;
+            btnACTUALIZAR.Click += btnACTUALIZAR_Click;
             // 
             // btnELIMINAR
             // 
             btnELIMINAR.Location = new Point(651, 501);
             btnELIMINAR.Name = "btnELIMINAR";
-            btnELIMINAR.Size = new Size(75, 23);
+            btnELIMINAR.Size = new Size(85, 23);
             btnELIMINAR.TabIndex = 14;
-            btnELIMINAR.Text = "button3";
+            btnELIMINAR.Text = "btnELIMINAR";
             btnELIMINAR.UseVisualStyleBackColor = true;
+            btnELIMINAR.Click += btnELIMINAR_Click;
             // 
-            // txb
+            // tbxEliminar
             // 
-            txb.Location = new Point(636, 462);
-            txb.Name = "txb";
-            txb.Size = new Size(100, 23);
-            txb.TabIndex = 15;
+            tbxEliminar.Location = new Point(636, 462);
+            tbxEliminar.Name = "tbxEliminar";
+            tbxEliminar.Size = new Size(100, 23);
+            tbxEliminar.TabIndex = 15;
             // 
             // btnLIMPIAR
             // 
@@ -188,6 +192,7 @@
             btnLIMPIAR.TabIndex = 16;
             btnLIMPIAR.Text = "LIMPIAR";
             btnLIMPIAR.UseVisualStyleBackColor = true;
+            btnLIMPIAR.Click += btnLIMPIAR_Click;
             // 
             // btnMOSTRAR
             // 
@@ -197,6 +202,7 @@
             btnMOSTRAR.TabIndex = 17;
             btnMOSTRAR.Text = "MOSTRAR";
             btnMOSTRAR.UseVisualStyleBackColor = true;
+            btnMOSTRAR.Click += btnMOSTRAR_Click;
             // 
             // INICIO
             // 
@@ -205,15 +211,15 @@
             ClientSize = new Size(800, 539);
             Controls.Add(btnMOSTRAR);
             Controls.Add(btnLIMPIAR);
-            Controls.Add(txb);
+            Controls.Add(tbxEliminar);
             Controls.Add(btnELIMINAR);
             Controls.Add(btnACTUALIZAR);
             Controls.Add(btnAGREGAR);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(tbxActivo);
+            Controls.Add(tbxFecha);
+            Controls.Add(tbxNombre);
+            Controls.Add(tbxID);
+            Controls.Add(tbxColor);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -223,6 +229,7 @@
             Controls.Add(dataGridView1);
             Name = "INICIO";
             Text = "INICIO";
+            Load += INICIO_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -237,15 +244,15 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox tbxColor;
+        private TextBox tbxID;
+        private TextBox tbxNombre;
+        private TextBox tbxFecha;
+        private TextBox tbxActivo;
         private Button btnAGREGAR;
         private Button btnACTUALIZAR;
         private Button btnELIMINAR;
-        private TextBox txb;
+        private TextBox tbxEliminar;
         private Button btnLIMPIAR;
         private Button btnMOSTRAR;
     }

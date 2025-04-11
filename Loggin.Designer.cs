@@ -89,6 +89,7 @@
             Controls.Add(label1);
             Name = "Loggin";
             Text = "Loggin";
+            Load += Loggin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
